@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+.hero {
+    min-height: 70vh;
+
+    .container {
+        background-image: url("/assets/images/portfolio-images/coding-quiz.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba($color: $primary-dark-blue, $alpha: 0.5);
+        min-height: 70vh;
+        display: grid;
+        align-items: end;
+        justify-content: start;
+        margin-bottom: 9rem;
+    }
+
+    @include media(tablet) {
+        .text {
+            max-width: 32rem;
+            width: 100%;
+        }
+    }
+}

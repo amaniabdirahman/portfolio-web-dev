@@ -1,0 +1,24 @@
+@use "./variables" as *;
+
+.about {
+    .container {
+        @include media(tablet) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+            column-gap: 4.3rem;
+            .about-image {
+                align-self: start;
+            }
+            .about-text {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.about-text {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-block: 1px solid $primary-grayish-dark-blue;
+}

@@ -1,0 +1,53 @@
+@use "./variables" as *;
+
+footer {
+    color: $white;
+    background-color: $primary-grayish-dark-blue;
+    text-align: center;
+    padding-block: 3.5rem;
+    .logo img {
+        margin: 0 auto;
+    }
+
+    @include media(tablet) {
+        .logo {
+            margin-right: 2.625rem;
+        }
+
+        .logo img {
+            margin: initial;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2.625rem;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    gap: 0.85rem;
+    justify-content: center;
+
+    @include media(tablet) {
+        justify-content: flex-start;
+        margin-left: auto;
+    }
+}
+
+// This positions the footer on the contact page at the bottom of the screen
+
+.contact-page-footer {
+    @include media(tablet) {
+        padding-block: 1.75rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}

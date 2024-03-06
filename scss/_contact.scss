@@ -1,0 +1,77 @@
+// This module styles the contact section for all pages and the contact page itself
+@use "./variables" as *;
+.contact {
+    .container {
+        margin-block: 7.2rem 5rem;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        @include media(tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+// No point creating another div, there is already a div there that will suit our purposes
+
+.contact-me .container {
+    border-top: 1px solid $secondary-lighter-grey;
+    padding-block: 2rem;
+    h2 {
+        margin-top: 0;
+    }
+
+    @include media(desktop) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.contact-form {
+    margin-bottom: 6rem;
+    .form-control {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+
+        &[data-has-error] {
+            .warning {
+                display: block;
+            }
+            input,
+            textarea {
+                border: 1px solid $secondary-bright-red;
+                outline: 1px solid $secondary-bright-red;
+            }
+        }
+    }
+    label {
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    input {
+        min-height: 3rem;
+    }
+    .warning {
+        font-weight: 700;
+        margin-block: 0.25rem 0;
+        color: $secondary-bright-red;
+        font-style: italic;
+        display: none;
+    }
+
+    textarea {
+        resize: none;
+        min-height: 6rem;
+    }
+    input,
+    textarea {
+        padding-block: 0.56rem;
+        padding-inline: 1rem;
+        &:focus {
+            outline: 1px solid $primary-cyan;
+            border: 1px solid $primary-cyan;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "portfolio-amani",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch-scss": "sass --watch ./scss/index.scss assets/css/main.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/jquery": "^3.5.29",
+        "sass": "^1.71.1"
+    }
+}

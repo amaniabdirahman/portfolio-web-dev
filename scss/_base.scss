@@ -1,0 +1,162 @@
+@use "./variables" as *;
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: $ff-san-serif;
+    color: $primary-grayish-dark-blue;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $ff-serif;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: inherit;
+    display: block;
+}
+
+p {
+    line-height: 1.8rem;
+}
+
+h1 {
+    word-spacing: 0.45px;
+    line-height: 1;
+    font-size: 3.125rem;
+}
+
+h2 {
+    word-spacing: 0.36px;
+    line-height: 1.05;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    line-height: 1.125;
+    word-spacing: 0.29px;
+}
+
+.list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.btn-default {
+    cursor: pointer;
+    text-decoration: none;
+    padding-block: 1rem;
+    color: #fff;
+    transition: all 250ms ease-in;
+    text-align: center;
+    width: 12.5rem;
+}
+
+.btn-primary {
+    background-color: $primary-dark-blue;
+    &:hover {
+        background-color: $primary-cyan;
+    }
+}
+
+.btn-hero {
+    position: relative;
+    --offset: 3rem;
+
+    .lines,
+    .text {
+        display: block;
+    }
+
+    .lines {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: var(--offset);
+        background-color: rgba(0, 0, 0, 0.293);
+        background-image: url("/assets/images/icons/chevron.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .text {
+        margin-left: var(--offset);
+        padding-inline-end: var(--offset);
+    }
+
+    &:hover {
+        .lines {
+            background-image: url("/assets/images/icons/cheveron-hover.svg");
+        }
+    }
+}
+
+// nav link is reusable in many places
+
+.nav-link {
+    padding-block: 2.5rem;
+    font-size: 0.75rem;
+    background-color: $primary-grayish-dark-blue;
+    color: $white;
+    &:hover {
+        background-color: $primary-cyan;
+    }
+    @include media(tablet) {
+        &:hover {
+            background-color: $primary-grayish-dark-blue;
+            color: $primary-cyan;
+        }
+        &.active {
+            color: $primary-cyan;
+        }
+    }
+}
+
+.btn-secondary {
+    border: 1px solid;
+    background-color: $secondary-light-grey;
+    color: $primary-grayish-dark-blue;
+    padding-inline: 2rem;
+    &:hover {
+        background-color: $primary-grayish-dark-blue;
+        color: $white;
+    }
+}
+
+.toggle-btn {
+    background-color: transparent;
+    width: 1.5rem;
+    border: none;
+    aspect-ratio: 1;
+    padding: 1.8rem;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    &[data-menu-shown="false"] {
+        background-image: url("/assets/images/icons/ham-menu-closed.svg");
+    }
+
+    &[data-menu-shown="true"] {
+        background-image: url("/assets/images/icons/ham-menu-if-opened.svg");
+    }
+    @include media(tablet) {
+        display: none;
+    }
+}

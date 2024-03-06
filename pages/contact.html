@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Page</title>
+        <link rel="stylesheet" href="../assets/css/main.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a class="logo" href="."
+                    ><img src="/assets/images/icons/Combined Shape.svg"
+                /></a>
+                <nav class="main-nav">
+                    <button
+                        data-menu-shown="false"
+                        class="toggle-btn"
+                        id="toggle-btn"
+                    ></button>
+                    <ul
+                        id="nav-menu"
+                        data-shown="false"
+                        class="menu list-unstyled"
+                    >
+                        <li><a class="nav-link" href="/index.html">Home</a></li>
+                        <li>
+                            <a
+                                class="nav-link"
+                                href="/pages/portfolio/index.html"
+                                >Portfolio</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#contact-section"
+                                >Contact Me</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <article class="contact-me">
+            <section>
+                <div class="container">
+                    <h2>Get In Touch</h2>
+                    <div class="message">
+                        <p>
+                            I’d love to hear about what you’re working on and
+                            how I could help. I’m currently looking for a new
+                            role and am open to a wide range of opportunities.
+                            My preference would be to find a position in a
+                            company in Ontario. But I’m also happy to hear about
+                            opportunites that don’t fit that description. I’m a
+                            hard-working and positive person who will always
+                            approach each task with a sense of purpose and
+                            attention to detail. Please do feel free to check
+                            out my online profiles below and get in touch using
+                            the form.
+                        </p>
+                        <ul class="list-unstyled socials">
+                            <li>
+                                <a href="https://github.com/amaniabdirahman"
+                                    ><img
+                                        src="../assets/images/icons/github-icon-dark.svg"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.linkedin.com/in/amani-abdirahman-4629a61a1/"
+                                    ><img
+                                        src="../assets/images/icons/linkedin-icon-dark.svg"
+                                /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <h2>Contact Me</h2>
+                    <form id="contact-form" class="contact-form">
+                        <!-- web3 form data -->
+                        <p class="result"></p>
+                        <input
+                            type="hidden"
+                            name="access_key"
+                            value="958ac5df-55ee-4b41-846f-9dd3e5e5d56e"
+                        />
+                        <input
+                            type="hidden"
+                            name="subject"
+                            value="New Submission from Web3Forms"
+                        />
+                        <input
+                            type="checkbox"
+                            name="botcheck"
+                            id=""
+                            style="display: none"
+                        />
+                        <!-- custom form data -->
+                        <div class="form-control">
+                            <label for="full_name">Name</label>
+                            <input
+                                type="text"
+                                name="full_name"
+                                id="full_name"
+                                placeholder="Fury Eberhardt"
+                            />
+                            <p class="warning">This field is required</p>
+                        </div>
+                        <div class="form-control">
+                            <label for="email_address">Email</label>
+                            <input
+                                type="email"
+                                name="email_address"
+                                id="email_address"
+                                placeholder="email@address.com"
+                            />
+                            <p class="warning">This field is required</p>
+                        </div>
+                        <div class="form-control">
+                            <label for="">Message</label>
+                            <textarea
+                                id="message-sent"
+                                name="message"
+                            ></textarea>
+                            <p class="warning">This field is required</p>
+                        </div>
+                        <button class="btn-default btn-primary">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </article>
+        <footer class="contact-page-footer">
+            <div class="container">
+                <a href="." class="logo">
+                    <img src="../assets/images/icons/logo-white.svg" />
+                </a>
+                <nav>
+                    <ul class="list-unstyled">
+                        <li><a class="nav-link" href="/index.html">Home</a></li>
+                        <li>
+                            <a class="nav-link" href="/pages/portfolio.html"
+                                >Portfolio</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav-link" href="./pages/contact.html"
+                                >Contact Me</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="list-unstyled socials">
+                    <li>
+                        <a
+                            href="https://github.com/amaniabdirahman"
+                            target="_blank"
+                            ><img src="../assets/images/icons/github-icon.svg"
+                        /></a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/amani-abdirahman-4629a61a1/"
+                            ><img src="../assets/images/icons/linkedin.svg"
+                        /></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="/assets/js/main.js"></script>
+        <script src="/assets/js/formScript.js"></script>
+    </body>
+</html>
