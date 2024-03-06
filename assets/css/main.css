@@ -260,7 +260,7 @@ header .menu[data-shown=true] {
   min-height: 70vh;
 }
 .hero .container {
-  background-image: url("/assets/images/portfolio-images/coding-quiz.png");
+  background-image: url("../images/portfolio-images/coding-quiz.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
